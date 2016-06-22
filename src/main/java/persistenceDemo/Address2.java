@@ -25,4 +25,13 @@ public class Address2
         this.city = city;
         this.zip = zip;
     }
+
+    @Override
+    public String toString() {
+        return "Address2{" +
+                "street='" + street + '\'' +
+                ", city='" + city + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
+    }
 }

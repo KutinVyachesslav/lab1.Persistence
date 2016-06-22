@@ -15,6 +15,9 @@ public class A2
     @OneToOne
     A1 a1;
 
+    @Embedded
+    private Address2 address;
+
     protected A2()
     {
 
@@ -22,6 +25,18 @@ public class A2
 
 
     public A2(String text) {
+        this.text = text;
+    }
+
+    public A2(String text, A1 a1)
+    {
+        this.text = text;
+        this.a1 = a1;
+    }
+
+    public A2(Address2 address, String text)
+    {
+        this.address = address;
         this.text = text;
     }
 
@@ -55,6 +70,7 @@ public class A2
         return "A2{" +
                 "id=" + id +
                 ", a1=" + a1 +
+                ", address=" + address +
                 ", text='" + text + '\'' +
                 '}';
     }

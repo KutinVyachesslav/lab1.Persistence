@@ -88,4 +88,15 @@ public class City implements Serializable {
     public void setCountryId(Country countryId) {
         this.countryId = countryId;
     }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "addressCollection=" + addressCollection.size() +
+                ", city='" + city + '\'' +
+                ", lastUpdate=" + lastUpdate +
+                ", cityId=" + cityId +
+                ", countryId=" + countryId +
+                '}';
+    }
 }

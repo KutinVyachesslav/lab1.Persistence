@@ -59,7 +59,7 @@
 			          <archive>
 			            <manifest>
 			              <addClasspath>true</addClasspath>
-			              <mainClass>persistencedemo.PersistenceDemo</mainClass>
+			              <mainClass>persistenceDemo.PersistenceDemo</mainClass>
 			            </manifest>
 			          </archive>
 			        </configuration>
@@ -76,7 +76,7 @@
 			      <configuration>
 			        <archive>
 			          <manifest>
-			            <mainClass>persistencedemo.PersistenceDemo</mainClass>
+			            <mainClass>persistenceDemo.PersistenceDemo</mainClass>
 			          </manifest>
 			        </archive>
 			        <descriptorRefs>

@@ -126,9 +126,20 @@ public class Hotel implements Serializable {
         return true;
     }
 
+//    @Override
+//    public String toString() {
+//        return "persistencedemo.Hotel[ id=" + id + " ]";
+//    }
+
+
     @Override
     public String toString() {
-        return "persistencedemo.Hotel[ id=" + id + " ]";
+        return "Hotel{" +
+                "id=" + id +
+                ", address='" + address + '\'' +
+                ", name='" + name + '\'' +
+                ", zip='" + zip + '\'' +
+                ", city=" + city +
+                '}';
     }
-    
 }

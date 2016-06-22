@@ -141,9 +141,22 @@ public class City implements Serializable {
         return true;
     }
 
+//    @Override
+//    public String toString() {
+//        return "persistencedemo.City[ id=" + id + " ] HotelColl:"+getHotelCollection().size();
+//    }
+
+
     @Override
     public String toString() {
-        return "persistencedemo.City[ id=" + id + " ]";
+        return "City{" +
+                "id=" + id +
+                ", country='" + country + '\'' +
+                ", map='" + map + '\'' +
+                ", name='" + name + '\'' +
+                ", state='" + state + '\'' +
+                ", hotelCollection=" + hotelCollection.size() +
+                '}';
     }
 
     void setId(int i) {

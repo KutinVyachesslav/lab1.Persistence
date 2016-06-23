@@ -16,6 +16,11 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>2.0.10.RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
@@ -44,11 +49,11 @@
 			<version>5.1.35</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
-		<dependency>
+<!--		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>eclipselink</artifactId>
 			<version>2.5.0</version>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<!-- Import dependency management from Spring Boot -->
 			<groupId>org.springframework.boot</groupId>

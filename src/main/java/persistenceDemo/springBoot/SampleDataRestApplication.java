@@ -16,27 +16,18 @@
 
 package persistenceDemo.springBoot;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.orm.jpa.EntityScan;
-import persistenceDemo.Entity.Film;
-import persistenceDemo.Entity.Payment;
-import persistenceDemo.springBoot.domain.Account;
-import persistenceDemo.springBoot.service.AccountRepository;
-
-import javax.persistence.EntityManager;
 
 @SpringBootApplication
 @EntityScan("persistenceDemo.Entity")
 public class SampleDataRestApplication implements CommandLineRunner{
 
-	@Autowired
-	private AccountRepository accountRepository;
+//	@Autowired
+//	private AccountRepository accountRepository;
 
-	@Autowired
-	private EntityManager em;
 //
 //	@Autowired
 //	private AttractionsRepository attractions;
@@ -50,8 +41,8 @@ public class SampleDataRestApplication implements CommandLineRunner{
 	// TODO @Override
 	public void run(String... args) throws Exception {
 
-	this.accountRepository.deleteAll();
-	this.accountRepository.save(new Account("egor", "1234"));
+//	this.accountRepository.deleteAll();
+//	this.accountRepository.save(new Account("egor", "1234"));
 
 //		Payment p = em.createQuery("select p from Payment p",Payment.class).getSingleResult();
 //

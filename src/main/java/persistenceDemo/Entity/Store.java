@@ -23,7 +23,8 @@ import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "store", uniqueConstraints = @UniqueConstraint(columnNames = {"manager_staff_id"}))
+@Table(name = "store")
+//@Table(name = "store", uniqueConstraints = @UniqueConstraint(columnNames = {"manager_staff_id"}))
 public class Store implements Serializable {
 
     @OneToMany(targetEntity = Customer.class, mappedBy = "storeId")

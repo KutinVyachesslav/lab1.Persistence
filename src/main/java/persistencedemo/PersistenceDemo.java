@@ -1,4 +1,6 @@
 package persistenceDemo;
+import persistenceDemo.Entity.Film;
+
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -33,14 +35,22 @@ public class PersistenceDemo {
 //
 //        em.getTransaction().commit();
 
-        List<persistenceDemo.Entity.City> list = em.createQuery("select c from City c",persistenceDemo.Entity.City.class).getResultList();
-        System.out.println("size:"+list.size());
-        for(persistenceDemo.Entity.City c:list)
-        {
-            System.out.println(c);
-        }
+        Film f = em.createQuery(
+                "select f from Payment p,Rental r,Inventory i,Film f" +
+                        " where p.rentalId=r and r.inventoryId = i and i.filmId = f ",
+                persistenceDemo.Entity.Film.class).setMaxResults(1).getSingleResult();
+        System.out.println("f:"+f);
+        //printList(list);
 
         em.close();
         emf.close();
-    }  
+    }
+    public static void printList(List list)
+    {
+        for(Object o:list)
+        {
+            System.out.println(o);
+        }
+
+    }
 }

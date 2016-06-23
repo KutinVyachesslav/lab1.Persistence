@@ -222,4 +222,26 @@ public class Film implements Serializable {
     public void setReleaseYear(Date releaseYear) {
         this.releaseYear = releaseYear;
     }
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "rentalRate=" + rentalRate +
+                ", rentalDuration=" + rentalDuration +
+                ", inventoryCollection=" + inventoryCollection +
+                ", length=" + length +
+                ", rating='" + rating + '\'' +
+                ", languageId=" + languageId +
+                ", description='" + description + '\'' +
+                ", replacementCost=" + replacementCost +
+                ", title='" + title + '\'' +
+                ", specialFeatures='" + specialFeatures + '\'' +
+                ", filmActorCollection=" + filmActorCollection +
+                ", filmCategoryCollection=" + filmCategoryCollection +
+                ", filmId=" + filmId +
+                ", lastUpdate=" + lastUpdate +
+                ", originalLanguageId=" + originalLanguageId +
+                ", releaseYear=" + releaseYear +
+                '}';
+    }
 }

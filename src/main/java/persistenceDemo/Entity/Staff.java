@@ -37,8 +37,8 @@ public class Staff implements Serializable {
     @Basic
     private boolean active;
 
-    @OneToOne(targetEntity = Store.class)
-    private Store store;
+//    @OneToOne(targetEntity = Store.class)
+//    private Store store;
 
     @ManyToOne(optional = false, targetEntity = Store.class)
     @JoinColumn(name = "store_id")
@@ -110,13 +110,6 @@ public class Staff implements Serializable {
         this.active = active;
     }
 
-    public Store getStore() {
-        return this.store;
-    }
-
-    public void setStore(Store store) {
-        this.store = store;
-    }
 
     public Store getStoreId() {
         return this.storeId;

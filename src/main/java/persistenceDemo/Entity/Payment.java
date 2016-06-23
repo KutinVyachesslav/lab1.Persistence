@@ -113,4 +113,9 @@ public class Payment implements Serializable {
     public void setRentalId(Rental rentalId) {
         this.rentalId = rentalId;
     }
+
+    @Override
+    public String toString() {
+        return "persistenceDemo.Entity.Payment(paymentId=" + this.paymentId + ", amount=" + this.amount + ")";
+    }
 }

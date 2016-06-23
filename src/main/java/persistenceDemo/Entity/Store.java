@@ -50,7 +50,7 @@ public class Store implements Serializable {
     @JoinColumn(name = "address_id")
     private Address addressId;
 
-    @OneToOne(optional = false, targetEntity = Staff.class, mappedBy = "store")
+    @OneToOne(optional = false, targetEntity = Staff.class, mappedBy = "storeId")
     @JoinColumn(name = "manager_staff_id")
     private Staff managerStaffId;
 

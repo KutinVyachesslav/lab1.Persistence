@@ -16,12 +16,10 @@
 
 package persistenceDemo.springBoot.service;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import persistenceDemo.Entity.City;
+import persistenceDemo.springBoot.Entity.City;
 
 
 import java.util.List;

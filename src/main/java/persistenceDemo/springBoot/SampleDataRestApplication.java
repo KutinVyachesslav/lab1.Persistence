@@ -22,7 +22,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.orm.jpa.EntityScan;
 
 @SpringBootApplication
-@EntityScan("persistenceDemo.Entity")
 public class SampleDataRestApplication implements CommandLineRunner{
 
 //	@Autowired

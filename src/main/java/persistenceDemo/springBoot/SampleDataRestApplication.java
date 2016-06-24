@@ -16,16 +16,22 @@
 
 package persistenceDemo.springBoot;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.orm.jpa.EntityScan;
+import persistenceDemo.springBoot.domain.Role;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
 @SpringBootApplication
 public class SampleDataRestApplication implements CommandLineRunner{
 
 //	@Autowired
 //	private AccountRepository accountRepository;
+	@Autowired
+	private EntityManagerFactory emf;
 
 //
 //	@Autowired
@@ -40,6 +46,19 @@ public class SampleDataRestApplication implements CommandLineRunner{
 	// TODO @Override
 	public void run(String... args) throws Exception {
 
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+
+		Object cnt = em.createQuery("select count (r) from Role r").getSingleResult();
+		System.out.println("roles found:"+cnt);
+
+//		if (cnt==0) {
+//			em.persist(new Role("ROLE_USER"));
+//			em.persist(new Role("ROLE_USER"));
+//			em.persist(new Role("ROLE_USER"));
+//		}
+
+		em.getTransaction().commit();
 //	this.accountRepository.deleteAll();
 //	this.accountRepository.save(new Account("egor", "1234"));
 

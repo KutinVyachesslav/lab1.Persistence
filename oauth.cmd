@@ -1,0 +1,1 @@
+curl -X POST -k -vu clientapp:123456 http://localhost:9000/oauth/token -H "Accept: application/json" -d "password=spring&username=roy&grant_type=password&scope=read write&client_secret=123456&client_id=clientapp"
